@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
 <meta property="og:title" content="ISG media · קולנוע הודי באולם שלכם">
-<meta property="og:description" content="סרטים הודיים נבחרים להקרנה, עם אפשרות להרצאה מלווה.">
+<meta property="og:description" content="סרטים הודיים נבחרים להקרנה, עם אפשרות להרצאה.">
 <meta property="og:image" content="https://rinatalfa.github.io/isg-cinema/assets/black.jpg">
 <title>ISG media · קולנוע הודי באולם שלכם</title>
 <meta name="description" content="סרטים נבחרים מהודו להקרנה באולם: מתנ״סים, היכלי תרבות ובתי אבות.">
@@ -77,7 +77,6 @@
   .title{text-align:center;grid-column:1/-1;margin-bottom:14px}
   .title h2{font-family:"Frank Ruhl Libre",serif;font-weight:500;font-size:clamp(2.3rem,6vw,3.6rem);line-height:1.1;margin:0;color:var(--accent)}
   .title .en{display:inline-block;margin-top:14px;padding-top:12px;border-top:1px solid var(--line);min-width:min(320px,70%);letter-spacing:.1em;color:var(--accent);font-size:1.05rem;direction:ltr}
-  .synopsis .tagline{margin:0 0 16px;text-align:right;font-size:1.2rem;font-weight:500;line-height:1.5;color:var(--accent)}
   .meta{color:var(--muted);font-size:1.05rem;padding-bottom:12px;margin-bottom:12px;border-bottom:1px solid var(--line)}
   .meta .star{color:var(--accent);margin:0 8px}
   .genre{display:inline-block;font-weight:700;margin-bottom:8px}
@@ -162,7 +161,7 @@
   <canvas id="heroFx" aria-hidden="true"></canvas>
   <div class="hero-inner">
     <h1>קולנוע הודי<br><em>באולם שלכם</em></h1>
-    <p>סרטים הודיים נבחרים להקרנה, עם אפשרות להרצאה מלווה.</p>
+    <p>סרטים הודיים נבחרים להקרנה, עם אפשרות להרצאה.</p>
     <p class="lead">הקולנוע ההודי מציע עושר ויזואלי יוצא דופן: תנועה, מוזיקה, רגש, צבעוניות ומסורת שהופכים כל סיפור למסע מלא קסם. זהו קולנוע שמיטיב לחבר בין ישן לחדש, בין רגש לצבעוניות כובשת, ודרכו אנו נחשפים למרחבי החיים ההודיים, לתרבות העשירה, למורכבות החברתית ולדיוקני היום־יום.</p>
     <p class="lead series">סדרת סרט + הרצאה מזמינה אתכם לצלול אל ליבה הפועם של הודו דרך שילוב ייחודי בין סרט מרגש להרצאה, היוצר חווית צפייה מודעת ומעמיקה, המאפשרת להבין את הודו לא רק דרך עיני הדמויות, אלא גם דרך פריזמה רחבה של היסטוריה ותרבות, והופכת את הצפייה למסע תרבותי אמיתי, מזמין, מעשיר ומרתק.</p>
     <a class="cta" href="#films">לסרטים שלנו ↓</a>
@@ -184,13 +183,11 @@
 
 <!-- ===== יצירת קשר ===== -->
 <footer class="contact" id="contact">
-  <p>נשמח להתאים לכם סרט, עם הרצאה מלווה או בלעדיה.</p>
   <p class="sub">לתיאום מועד הקרנה:</p>
   <div class="btns">
     <a class="wa" href="#" onclick="return false">וואטסאפ</a>
     <a class="mail" href="#" onclick="return false">שליחת מייל</a>
   </div>
-  <div class="placeholder-note">(פרטי הקשר כאן הם דוגמה ויוחלפו בפרטים האמיתיים)</div>
   <div class="foot">
     <div class="logo-orn small">
       <svg id="logoOrnament2" viewBox="-100 -100 200 200" aria-hidden="true"></svg>
@@ -372,8 +369,7 @@ FILMS.forEach((f, i) => {
           ${f.trailer ? `<button class="trailer" data-url="${f.trailer}"><span class="play"></span>לצפייה בטריילר</button>` : ""}
         </div>
         <div class="synopsis reveal d3">
-          ${f.tagline ? `<p class="tagline">${f.tagline}</p>` : ""}
-          <h3>תקציר:</h3>
+          <h3>${f.tagline || "תקציר:"}</h3>
           <p>${first}</p>
           ${rest.length ? `<details class="more"><summary><span class="closed">המשך</span><span class="opened">סגירה</span></summary><div class="rest">${rest.map(p => `<p>${p}</p>`).join("")}</div></details>` : ""}
           ${f.about ? `<div class="about"><h3>על הסרט</h3><p>${f.about}</p></div>` : ""}
