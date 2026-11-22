@@ -118,6 +118,11 @@
   .film.in .reveal.d2{transition-delay:.15s}
   .film.in .reveal.d3{transition-delay:.3s}
 
+  /* טלפון וטאבלט: רווח מעל התקציר, ושורת הכותרת הצבעונית בגודל הטקסט */
+  @media (max-width:859px){
+    .synopsis{margin-top:30px}
+    .synopsis h3{font-size:1em;line-height:1.6;letter-spacing:0;margin-bottom:6px}
+  }
   @media (min-width:860px){
     .film{padding:80px 0 110px}
     .info{grid-template-columns:minmax(260px,1fr) 1.6fr}
