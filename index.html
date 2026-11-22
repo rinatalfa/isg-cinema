@@ -140,7 +140,7 @@
   .placeholder-note{margin-top:18px;font-size:.85rem;color:#b79bb0}
   /* רק אזור הלוגו התחתון על רקע בהיר */
   .foot{margin:60px -16px 0;padding:36px 16px 28px;background:var(--cream);font-size:.85rem;color:var(--muted)}
-  .foot-logo{width:min(108px,28vw);height:min(108px,28vw);margin:0 auto 12px}
+  .foot-logo{display:block;width:min(110px,30vw);height:auto;margin:0 auto 12px}
 
   /* ---------- חלון טריילר ---------- */
   .modal{position:fixed;inset:0;z-index:50;display:none;place-items:center;background:rgba(10,5,10,.86);padding:16px}
@@ -196,7 +196,7 @@
     <a class="mail" href="#" onclick="return false">שליחת מייל</a>
   </div>
   <div class="foot">
-    <div class="logo-badge intro-logo foot-logo"><img src="assets/isg-logo.png" alt="ISG media"></div>
+    <img class="foot-logo" src="assets/isg-logo.png" alt="ISG media">
     © ISG media
   </div>
 </footer>
